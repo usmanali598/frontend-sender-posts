@@ -1,38 +1,212 @@
-.App {
-  text-align: center;
+
+body{
+  width: 100vw;
+  height: 100vh;
+  background-color: #b3b3b3;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+div.App{
+  width: 100%;
+  height: 100%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+div.cont{
+  width: 98%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+div.searches{
+  display: -webkit-box;
+ display: -ms-flexbox;
+ display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2px 5px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+div.post-section{
+ display: -webkit-box;
+ display: -ms-flexbox;
+ display: flex;
+}
+
+section.sec{
+  width: 75%;
+  padding: 2px 5px;
+}
+
+nav{
+  padding: 2px 5px;
+  width: 25%;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+}
+
+div.senders{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  background-color: #cccccc;
+  border: 1px groove black;
+  margin: 0 0px 5px 0;
+  padding: 5px;
+}
+p.sender{
+  font-size: 0.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: inherit;
+  margin: 1px 0px;
+}
+
+span.counts{
+     border: 1px solid black;
+  border-radius: 50%;
+  padding: 0px 4px;
+  font-size: 0.8rem;
+  background-color: #b3b3b3;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+div.order-svgs{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 20%;
+}
+span.upside{
+  width: 1rem;
+  height: 1.1rem;
+  background-image: url('./assets/images/asset_upside.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-color: black;
+  margin: 0 2px;
+}
+
+span.downside{
+  background-image: url('./assets/images/asset_downside.svg');
+  width: 1rem;
+  height: 1.1rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-color: black;
+  margin: 0 2px;
+}
+
+div.msg{
+  font-size: 0.7rem;
+  background-color: #f2f2f2;
+  height: auto;
+  margin: 0px 0px 7px 7px;
+  border: 2px groove;
+}
+
+p.msg-time{
+  border-bottom: 3px groove;
+  margin: 0;
+  padding: 5px;
+}
+
+p.msg-text{
+  margin: 0;
+  padding: 5px;
+}
+
+article{
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  background: gray;
+  height: 100vh;
+  width: 100vw;
+}
+
+.formDanger{
+  margin: 2px 0px;
+  font-size: 0.4rem;
+  color: red;
+}
+.none{
+  display: none;
+}
+
+section.email-block{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: white;
+  width: 50%;
+}
+
+form{
+   display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+}
+
+label{
+  font-size: 0.9rem;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.email-button{
+  -ms-flex-item-align: end;
+  -ms-grid-row-align: end;
+  align-self: end;
+  margin: 1rem 0rem;
+  font-size: 0.8rem;
+}
+
+h1.email-head{
+  font-weight: 200;
+}
+
+input[name='searchPosts'],
+input[name='searchSenders']{
+  width: 8rem;
+}
+
+::-webkit-input-placeholder { /* Edge */
+  text-align: center;
+}
+:-ms-input-placeholder { /* Internet Explorer */
+   text-align: center;
+}
+
+::placeholder {
+   text-align: center;
 }
