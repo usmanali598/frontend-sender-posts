@@ -43,7 +43,7 @@ const Register: React.FC = () => {
                 <form action="">
                     <label htmlFor="name">Name</label>
                     <input type="text" name='name' onChange={handleChange} />
-                    <label htmlFor="email" >Email</label>
+                    <label htmlFor="email">Email</label>
                     <input type="email" name='email' onChange={handleChange} />
                     <p className={error ? 'formDanger' : 'none'}>Please, check if name and email is correct</p>
                     <button className="email-button" onClick={formValues}>GO</button>

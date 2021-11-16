@@ -3,6 +3,7 @@ body{
   width: 100vw;
   height: 100vh;
   background-color: #b3b3b3;
+  margin: 0;
 }
 
 div.App{
@@ -27,60 +28,6 @@ div.searches{
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-div.post-section{
- display: -webkit-box;
- display: -ms-flexbox;
- display: flex;
-}
-
-section.sec{
-  width: 75%;
-  padding: 2px 5px;
-}
-
-nav{
-  padding: 2px 5px;
-  width: 25%;
-}
-
-nav a{
-    text-decoration: none;
-    color: black;
-}
-
-div.senders{
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  background-color: #cccccc;
-  border: 1px groove black;
-  margin: 0 0px 5px 0;
-  padding: 5px;
-}
-p.sender{
-  font-size: 0.8rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: inherit;
-  margin: 1px 0px;
-}
-
-span.counts{
-     border: 1px solid black;
-  border-radius: 50%;
-  padding: 0px 4px;
-  font-size: 0.8rem;
-  background-color: #b3b3b3;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
 }
 
 div.order-svgs{
@@ -114,6 +61,60 @@ span.downside{
   margin: 0 2px;
 }
 
+div.post-section{
+ display: -webkit-box;
+ display: -ms-flexbox;
+ display: flex;
+}
+
+nav{
+  padding: 2px 5px;
+  width: 25%;
+}
+
+nav a{
+  text-decoration: none;
+  color: black;
+}
+
+div.senders{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  background-color: #cccccc;
+  border: 1px groove black;
+  margin: 0 0px 5px 0;
+  padding: 5px;
+}
+p.sender{
+  font-size: 0.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: inherit;
+  margin: 1px 0px;
+}
+
+span.counts{
+  border: 1px solid black;
+  border-radius: 50%;
+  padding: 0px 4px;
+  font-size: 0.8rem;
+  background-color: #b3b3b3;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+section.sec{
+  width: 75%;
+  padding: 2px 5px;
+}
+
 div.msg{
   font-size: 0.7rem;
   background-color: #f2f2f2;
@@ -142,15 +143,6 @@ article{
   width: 100vw;
 }
 
-.formDanger{
-  margin: 2px 0px;
-  font-size: 0.4rem;
-  color: red;
-}
-.none{
-  display: none;
-}
-
 section.email-block{
   display: -webkit-box;
   display: -ms-flexbox;
@@ -166,8 +158,12 @@ section.email-block{
   width: 50%;
 }
 
+h1.email-head{
+  font-weight: 200;
+}
+
 form{
-   display: -webkit-box;
+  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
@@ -183,21 +179,26 @@ label{
       align-self: flex-start;
 }
 
+input[name='searchPosts'],
+input[name='searchSenders']{
+  width: 8rem;
+}
+
+.formDanger{
+  margin: 2px 0px;
+  font-size: 0.4rem;
+  color: red;
+}
+.none{
+  display: none;
+}
+
 .email-button{
   -ms-flex-item-align: end;
   -ms-grid-row-align: end;
   align-self: end;
   margin: 1rem 0rem;
   font-size: 0.8rem;
-}
-
-h1.email-head{
-  font-weight: 200;
-}
-
-input[name='searchPosts'],
-input[name='searchSenders']{
-  width: 8rem;
 }
 
 ::-webkit-input-placeholder { /* Edge */

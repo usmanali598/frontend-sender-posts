@@ -61,20 +61,19 @@ const Posts: React.FC = () => {
     const searchPosts = async (e: any) => {
         if (e.key.toLowerCase() == 'enter') {
             if (sender) {
-                console.log(sender, 'sender works');
                 let items: any = sender && sender.filter((item: any) => item.message.toLowerCase().indexOf(e.target.value.toLowerCase()) > -1)
                 await setPosts(items);
             } else if (posts) {
-                console.log(posts, 'posts');
+                // Todo - fix needed
                 let postsFiltered = posts.filter((postItems: any) => postItems.from_id === id);
                 let postsFilteredUrlId: any = postsFiltered.filter((serch: any) => serch.message.toLowerCase().indexOf(e.target.value.toLowerCase()) > -1)
                 await setPosts(postsFilteredUrlId);
             }
         }
     }
-
+        
+    //order by creation time
     const defaultPostsSorting = (postsArray: any) => {
-        //order by creation time
         postsArray.sort((x: any, y: any) => +new Date(x.created_time) - +new Date(y.created_time));
     }
 
@@ -135,7 +134,7 @@ const Posts: React.FC = () => {
                         <input type="text" name='searchPosts' onKeyDown={(e) => searchPosts(e)} placeholder='search' />
                     </div>
                 </div>
-                {isLoading && <h3>Loading...</h3>}
+                {isLoading && <h5>Loading...</h5>}
                 {errorMessage && <span>Correct Token is required to run the app.</span>}
                 <div className='post-section'>
                     <nav>
