@@ -64,7 +64,7 @@ const Posts: React.FC = () => {
                 let items: any = sender && sender.filter((item: any) => item.message.toLowerCase().indexOf(e.target.value.toLowerCase()) > -1)
                 await setPosts(items);
             } else if (posts) {
-                // Todo - fix needed
+                // Todo - fix needed for user_id filter posts
                 let postsFiltered = posts.filter((postItems: any) => postItems.from_id === id);
                 let postsFilteredUrlId: any = postsFiltered.filter((serch: any) => serch.message.toLowerCase().indexOf(e.target.value.toLowerCase()) > -1)
                 await setPosts(postsFilteredUrlId);
